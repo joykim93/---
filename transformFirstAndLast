@@ -1,0 +1,27 @@
+# 문제: transformFirstAndLast
+
+# 요구사항: 배열을 입력받아 차례대로 배열의 첫 요소와 마지막 요소를 키와 값으로 하는 객체를 리턴하는 함수를 작성하시오
+
+# My Solution
+function transformFirstAndLast(arr) {
+  // 빈 배열을 받은 경우, 빈 객체를 리턴한다
+  if(arr.length === 0) return {}
+
+  // 빈 객체를 선언해준다
+  let obj = {}
+  // arr의 첫 요소를 key 값으로 할당해준다
+  let key = arr[0]
+
+  // arr의 길이가 1인 경우
+  if(arr.length === 1) {
+    // arr의 첫 요소를 key와 value로 mapping
+    obj[key] = key
+    return obj
+  }
+  // arr의 마지막 요소를 key와 value로 mapping
+  let value = arr[arr.length - 1]
+
+  obj[key] = value
+  
+  return obj  
+}
