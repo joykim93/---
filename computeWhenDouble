@@ -1,0 +1,19 @@
+# 문제: transformFirstAndLast
+
+# 요구사항: 연이율(number)을 입력받아 원금이 2배 이상이 될 때까지 걸리는 시간(년)을 리턴하는 함수를 작성하시오
+
+# My Solution
+function computeWhenDouble(interestRate) {
+  // 원금
+  let principal = 1
+  let year = 0;
+  // 원금이 2이상이 되면 while문 종료
+  while(principal < 2) {
+    // 연이율을 고려한 새로운 원금
+    principal = principal * (1 + 0.01 * interestRate)
+    // +1년
+    year++;
+  }
+
+  return year
+}
