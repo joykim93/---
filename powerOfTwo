@@ -1,0 +1,15 @@
+# 문제: powerOfTwo
+
+# 요구사항: 수(num)를 입력받아 2의 거듭제곱인지 여부를 리턴해는 함수를 작성하시오
+
+# My Solution
+function powerOfTwo(num) {
+  // num이 1이라면, true 반환
+  if(num === 1) return true
+  // num이 2이하라면, while문 종료
+  while(num > 2) {
+    num = num / 2;
+  }
+  // num이 2이면 true 반환, 이외 값들은 false 반환
+  return num === 2 ? true : false
+}
